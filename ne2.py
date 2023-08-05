@@ -104,7 +104,7 @@ def worker():
 
 
 llama_daemon = threading.Thread(target=worker, daemon=True)
-# llama_daemon.start()
+llama_daemon.start()
 
 app = FastAPI()
 
@@ -123,15 +123,3 @@ def generate_prompt(url_id: str):
     llama_q.put(request_object)
     return "REPORT REQUESTED for id:{url_id}"
     
-
-
-
-
-
-
-
-
-# if __name__ == "__main__":
-#     #doc1 = collection.find_one({"_id":"64cd40add9dc8c347abd1443"})
-#     doc1 = collection.find_one()
-#     print(doc1)
