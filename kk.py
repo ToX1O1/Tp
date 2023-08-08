@@ -1,5 +1,4 @@
 import pymongo 
-from sklearn.feature_extraction.text import TfidfVectorizer
 import gensim
 from gensim.models import Word2Vec
 from nltk.tokenize import word_tokenize
